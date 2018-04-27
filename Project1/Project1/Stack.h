@@ -1,10 +1,11 @@
 #ifndef STACK_H
 #define STACK_H
-#include <iostream>
-using namespace std;
-const int CAPCAITY = 10;
-class  Stack {
-	friend ostream& operator <<(ostream& out,const Stack &otherStack);
+
+
+#include "AnyList.h"
+const int SIZE = 10;
+class Stack
+{
 public:
 	//constructor
 	Stack();
@@ -34,7 +35,7 @@ public:
 	int top() const;
 
 	//empty stack
-	void empty();
+	void emptyStack();
 
 	//delete list
 	void destroyStack();
@@ -42,8 +43,8 @@ public:
 	//destructor
 	~Stack();
 private:
-	int *a;
-	int count;
+	AnyList *ptrToList;
 	int capacity;
+	int count;
 };
 #endif // !STACK_H
